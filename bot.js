@@ -3,6 +3,7 @@ var SteamUser = require ("steam-user");
 var client = new SteamUser();
 
 var friends = new Steam.SteamFriends(client.client);
+var config = require('./config.json');
 
 var SteamCommunity = require('steamcommunity');
 var community = new SteamCommunity();
@@ -17,9 +18,9 @@ var SteamTrade = new SteamTrade();
 ////////////////////// CHANGE ONLY YourAccountName, YourPassword and STEAMID IN WITHDRAW
 
 client.logOn({
-   "accountName": "YourAccountName",
-   "password": "YourPassword"
- });
+	accountName: config.username,
+	password: config.password,
+};
 
  client.on("loggedOn", function(details){
    console.log("Logged On To Steam Server With The ID Of " + client.steamID.getSteam3RenderedID());
@@ -47,7 +48,7 @@ SteamTrade.setCookie(cookie);
 friends.on("friendMsg", function(user, msg, type){
  if(type == Steam.EChatEntryType.ChatMsg){
   if(msg == "Hello"){
-   friends.sendMessage(user,"Hello!Send me trade invite.");
+   friends.sendMessage(user,"Hello! Send me a trade invite.");
    }
  }
 })
