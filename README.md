@@ -8,7 +8,7 @@
 <li>SDA (Only SDA)</li>
 <a href="https://github.com/Jessecar96/SteamDesktopAuthenticator">SDA Download here (GitHub)</a>
 <h2>Installing with cmd (look to video for more info!!!)</h2>
-Create a folder (SteamBot) on your desktop. Copy the folder path. Open cmd and write cd <b>(past folder path)</b><br />
+<p>Create a folder (SteamBot) on your desktop. Copy the folder path. Open cmd and write cd <b>(past folder path)</b></><br />
 <b>Then you must write:</b><br />
 <li>npm install steam</li>
 <li>npm install client</li>
